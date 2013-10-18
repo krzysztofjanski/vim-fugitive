@@ -2294,6 +2294,7 @@ augroup END
 
 function! s:JumpInit() abort
   nnoremap <buffer> <silent> <CR>    :<C-U>exe <SID>GF("edit")<CR>
+    nnoremap <buffer> <silent> f     :<C-U>exe <SID>GF("split")<CR>
   if !&modifiable
     if exists(':CtrlP')
       nnoremap <buffer> <silent> <C-P> :<C-U>exe 'CtrlP '.fnameescape(<SID>repo().tree())<CR>
